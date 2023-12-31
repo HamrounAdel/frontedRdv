@@ -15,15 +15,23 @@ import LoginDoctor from './composant/doctor/js/LoginDoctor';
 import RouteDoctor from './composant/privateRoute/RouteDoctor';
 import ListRDV from './composant/Rdv/ListRDV';
 import UpdateRdv from './composant/Rdv/UpdateRdv';
-import RdvPatient from './composant/Rdv/RdvPatient';
+
 import ListRes from './composant/Rdv/ListRes';
+import ListRdvDoc from './composant/Rdv/ListRdvDoc'
+import Test from './composant/homepage/specialite/Test';
+
+
+
 
 function App() {
   return (
     <div >
       
    <Routes>
+    <Route path='/te' element={<Test/>}/>
+    <Route path='/updatRdv/:id' element={<UpdateRdv/>}/>
    <Route path='/rdv/consulter' element={<ListRes/>}/>
+   <Route path='/consulter/rdvDoc' element={<ListRdvDoc/>}/>
    <Route path='/' element={<Home/>}/>
    <Route path='/auth' element={<RouteUser/>}/>
    <Route  path='/login/User'  element={<LoginUser/>}/>
